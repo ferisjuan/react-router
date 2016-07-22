@@ -3,9 +3,10 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 
-var CreateHashHistory = require('history/lib/createHashHistory.js')
+var useRouterHistory = ReactRouter.useRouterHistory;
+var CreateHashHistory = require('history/lib/createHashHistory')
 
-var History = new CreateHashHistory({
+var appHistory = useRouterHistory(CreateHashHistory)({
   queryKey: false
 });
 
@@ -14,7 +15,7 @@ var Page1 = require('./components/Page1.jsx');
 var Page2 = require('./components/Page2.jsx');
 
 var Routes = (
-  <Router history={History}>
+  <Router history={appHistory}>
    <Route path="/" component={Base}>
      <Route path="/page1" component={Page1}/>
      <Route path="/page2" component={Page2}/>
