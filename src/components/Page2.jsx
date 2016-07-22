@@ -3,7 +3,7 @@ var React = require('react');
 var Page2 = React.createClass({
   render(){
     return(
-      <h2>Page 2</h2>
+      <h1>Page 2</h1>
     );
   }
 });
