@@ -2,11 +2,10 @@ var React = require('react');
 
 var Page2 = React.createClass({
   render(){
-
     return(
-      <h1>Page 2</h1>
+      <h2>Page 2</h2>
     );
   }
 });
 
-module.exports = Page2
+module.exports = Page2;
